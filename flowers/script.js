@@ -9,11 +9,11 @@ const showCardButton = document.querySelector(".show-card");
 const cardContainer = document.querySelector(".card");
 
 showCardButton.addEventListener("click", () => {
-  if (cardContainer.style.display === "block") {
-    cardContainer.style.display = "none";
-    showCardButton.classList.add("active");
-  } else {
-    cardContainer.style.display = "block";
+  if (showCardButton.classList.contains("active")) {
     showCardButton.classList.remove("active");
+    cardContainer.classList.add("show");
+  } else {
+    cardContainer.classList.remove("show");
+    showCardButton.classList.add("active");
   }
 });
